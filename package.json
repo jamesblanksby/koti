@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "DEBUG=Orvibo node index.js"
+  },
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.1",
+    "jshint": "^2.9.5",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "express": "latest",
+    "blanksby-node-orvibo": "latest"
+  }
+}

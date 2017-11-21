@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Koti</title>
+	<link rel="stylesheet" href="src/css/style.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<link rel="apple-touch-icon" href="src/gfx/icon/icon80.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="src/gfx/icon/icon152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="src/gfx/icon/icon180.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="src/gfx/icon/icon167.png">
+
+	<meta name="viewport" content="width=device-width, maximum-scale=1, minimal-ui, viewport-fit=cover">
+</head>
+<body>
+
+<!-- header -->
+<header>
+
+    <!-- back -->
+	<a class="back"></a>
+
+    <!-- title -->
+	<div class="title">Overview</div>
+
+    <!-- toggle -->
+	<!-- <a class="toggle"></a> -->
+</header>
+
+<!-- page:overview -->
+<div id="overview" class="page display">
+
+    <!-- main -->
+	<main>
+		
+        <!-- room_list -->
+		<div class="room_list">
+      
+            <!-- room -->
+            <div class="room clone">
+                
+                <!-- content -->
+                <div class="content">
+                    
+                    <!-- icon -->
+                    <div class="icon"></div>
+
+                    <!-- name -->
+                    <div class="name"></div>
+
+                    <!-- device -->
+                    <div class="device"><span></span></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+	</main>
+	
+</div>
+
+<!-- page:scene -->
+<div id="scene" class="page">
+
+    <!-- main -->
+	<main>
+		
+        <!-- scene_list -->
+		<div class="scene_list">
+      
+            <!-- scene -->      
+            <div class="scene clone">
+                
+                <!-- control -->
+                <div class="control">
+
+                    <!-- name -->
+                    <div class="name"></div>
+
+                    <!-- button -->
+                    <a class="button"></a>
+
+                </div>    
+
+            </div>
+
+        </div>
+
+	</main>
+
+</div>
+
+<!-- page:room -->
+<div id="room" class="page clone">
+
+    <!-- main -->
+    <main>
+    
+        <!-- device_list -->
+        <div class="device_list">
+            
+            <!-- device -->
+            <div class="device disable clone">
+                
+                <!-- control -->
+                <div class="control">
+                    
+                    <!-- icon -->
+                    <div class="icon"></div>
+
+                    <!-- name -->
+                    <div class="name"></div>
+
+                    <!-- toggle -->
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="toggle_body">
+                            <span class="toggle_switch"></span>
+                        </span>
+                    </label>
+
+                    <!-- color -->
+                    <div class="color"></div>
+
+                </div>
+
+                <!-- slider -->
+                <div class="slider brightness">
+                    
+                    <!-- icon -->
+                    <div class="icon dark"></div>
+
+                    <!-- range -->
+                    <input type="range" min="10" max="100" step="10" value="100">
+
+                    <!-- icon -->
+                    <div class="icon light"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- layer:color -->
+<div class="layer color">
+
+    <!-- toggle -->
+    <a class="toggle"></a>
+
+    <!-- tab -->
+    <div class="tab">
+        <a data-tab="white">White</a>
+        <a class="active" data-tab="color">Colour</a>
+    </div>
+
+    <!-- tab_view:white -->
+    <div class="tab_view" data-tab="white"></div>
+
+    <!-- tab_view:color -->
+    <div class="tab_view display" data-tab="color">
+        
+        <!-- wheel -->
+        <div class="wheel">
+            
+            <!-- picker -->
+            <div class="picker color">
+
+                <!-- loupe -->
+                <div class="loupe"></div>
+                
+                <!-- canvas -->
+                <canvas></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- swatch -->
+        <div class="swatch">
+
+            <div class="color red" data-color="[255,14,0]"></div>
+            <div class="color pink" data-color="[250,0,86]"></div>
+            <div class="color magenta" data-color="[169,0,177]"></div>
+            <div class="color purple" data-color="[114,0,187]"></div>
+            <div class="color phthalo" data-color="[70,61,185]"></div>
+            <div class="color blue" data-color="[0,141,248]"></div>
+            <div class="color arctic" data-color="[0,191,217]"></div>
+            <div class="color opal" data-color="[0,156,138]"></div>
+            <div class="color cerise" data-color="[43,195,98]"></div>
+            <div class="color pistachio" data-color="[120,206,66]"></div>
+            <div class="color yellow" data-color="[253,244,0]"></div>
+            <div class="color amber" data-color="[255,196,0]"></div>
+            <div class="color orange" data-color="[255,150,0]"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- footer -->
+<footer>
+
+    <!-- page:scene -->
+	<a id="scene" class="scene" data-page-id="scene" data-page-name="Scenes">
+
+        <!-- icon -->
+		<div class="icon"></div>
+
+        <!-- label -->
+		<div class="label">Scenes</div>
+
+	</a>
+
+    <!-- page:overview -->
+	<a id="overview" class="overview active" data-page-id="overview" data-page-name="Overview">
+
+        <!-- icon -->
+		<div class="icon"></div>
+
+        <!-- label -->
+		<div class="label">Overview</div>
+
+	</a>
+
+</footer>
+
+<!-- jquery -->
+<script src="./src/plugin/jquery/jquery.js"></script>
+
+<!-- socket.io -->
+<script src="./src/plugin/socket.io/socket.io.js"></script>
+
+<!-- tap -->
+<script src="./src/plugin/tap/tap.js"></script>
+
+<!-- range -->
+<script src="./src/plugin/range/range.js"></script>
+
+<!-- script -->
+<script src="./src/script/script.js"></script>
+
+</body>
+</html>
